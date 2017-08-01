@@ -9,16 +9,14 @@
 <body ng-app="myApp" ng-controller="MainController">
 <h2>{{message}}</h2>
 
-<form name="searchUser">
-    <input type="search" placeholder="search" ng-model="username">
-    <input type="submit" value="Find" ng-click="search(username)">
+<form name="searchUser" ng-submit="search(username)">
+    <input type="search" required placeholder="search" ng-model="username">
+    <input type="submit" value="Find">
 </form>
-{{username}}<br>
 
+<h2>{{user.login}}</h2>
 <img ng-src="{{user.avatar_url}}" title="{{user.login}} ">
+<img ng-src="">
 <p>{{error}}</p> <!--The will only appear if $http doesn't return anything -->
-<p>First name: {{person.firstName}}</p>
-<p>Last name: {{person.lastName}}</p>
-
 </body>
 </html>
