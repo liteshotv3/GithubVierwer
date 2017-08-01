@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Setup Angular</title>
+    <meta charset="UTF-8">
+    <!--must include a script to an angular CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js">
+
+    </script>
+</head>
+<!--ng-app is used to bootstrap an angular application, from then on, everything within that tag is part of
+tha angular app, everything outside it does not get evaluated by angular.-->
+<body>
+<!--This is outside the angular app-->
+<P>An angular statement will not be evaluated here because it is outside the ng-app directive</P>
+<p>1 + 1 = {{1 + 1}}</p>
+
+<!--the angular app begins here, notice the ng-app directive in the tag-->
+<div ng-app>
+    <p>Angular statments are now evaluated</p>
+    <p>1 + 1 = {{1 + 1}}</p>
+    <P>Evalute this 100 / 3 = {{100/3}}</P>
+</div>
+<script src="2.abstractingFunctions.js"></script>
+
+</body>
+</html>

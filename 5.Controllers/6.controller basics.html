@@ -1,0 +1,31 @@
+
+<!--4 basic controller facts-->
+
+<!--controllers use the controller directive (ng-controller),
+ng-controller can only be used where we have ng-app -->
+
+<!--controller will be  a function that Angular invokes-->
+
+<!--Controller takes a $scope parameter
+angular can pass the parameter $scope to our controller,
+the $ sign prefix is a sign the component you are working with
+ is provided by angular-->
+
+<!--We can attach our model to $scope-->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp"> <!--Can put ng-app on any element, this way whole page is app -->
+<head>
+    <title>Controllers</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="6.mainController.js"></script>
+</head>
+<!--we will put a controller on body and make it in charge of everything-->
+<body ng-controller="MainController"> <!--ng-controller is = to its name -->
+<h1>Hello Archie</h1>
+Message is: "{{message}}"
+<br>message length is: {{message.length}}
+
+</body>
+</html>

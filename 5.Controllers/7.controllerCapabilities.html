@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Controllers</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="7.mainController.js"></script>
+</head>
+<!--we will put a controller on body and make it in charge of everything-->
+<body  ng-app="myApp" ng-controller="MainController"> <!--ng-controller is = to its name -->
+<h1>Hello Archie</h1>
+Message is: "{{message}}"
+<br>message length is: {{message.length}}<br>
+
+<!--ng-src directive-->
+<img ng-src="{{person.imageSrc}}" title="{{person.firstName}} {{person.lastName}}">
+<!-- we can do regular src attribute, but the html will attempt to navigate to {{person.imageSrc}}
+    and will get a 404 error until angular loads and updates it, if you look in console we have a 404 error
+    check console for error and use ng-src from now on to avoid that issue-->
+<img src="{{person.imageSrc}}" title="{{person.firstName}} {{person.lastName}}">
+<p>First name: {{person.firstName}}</p>
+<p>Last name: {{person.lastName}}</p>
+
+</body>
+</html>
+
+<!-- Larger applications will have multiple controllers on the same page, all responsible for different
+    features of areas of data
+    it is also possible to next controllers within other controllers-->

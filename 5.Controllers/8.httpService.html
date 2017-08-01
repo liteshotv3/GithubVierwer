@@ -1,0 +1,23 @@
+<!--$http is a service provided by angular to make http calls-->
+<!--encapsulates HTTP communication-->
+<!--Can "ask" for $http inside a controller-->
+<!--always returns a promise-->
+<!--lets look at github API-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Controllers</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="8.mainController.js"></script>
+</head>
+<body  ng-app="myApp" ng-controller="MainController">
+<p>Message is: "{{message}}"</p>
+
+<img ng-src="{{user.avatar_url}}" title="{{user.login}} ">
+<p>{{error}}</p> <!--The will only appear if $http doesn't return anything -->
+<p>First name: {{person.firstName}}</p>
+<p>Last name: {{person.lastName}}</p>
+
+</body>
+</html>
