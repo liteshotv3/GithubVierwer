@@ -9,9 +9,12 @@
 <body ng-app="myApp" ng-controller="MainController">
 <h2>{{message}}</h2>
 
-<form name="searchUser" ng-submit="search(username)">
+<!--search() is defined in the controller-->
+<!--ng-submit sends search to the angular model-->
+<form name="searchUser" ><!--ng-submit="search(username)"-->
+    <!-- ng-model creates username in our controller scope -->
     <input type="search" required placeholder="search" ng-model="username">
-    <input type="submit" value="Find">
+    <input type="submit" value="Find" ng-click="search(username)">
 </form>
 
 <h2>{{user.login}}</h2>

@@ -2,3 +2,5 @@ Data appears on a an angular webpage is by adding it to the %scope in the contro
 data attached to the scope is the model
 Model does not touch the HTML
 Data binding moves model data to view
+
+directives all start with ng-
